@@ -1,0 +1,94 @@
+{
+    "$schema":  "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+    "name":  "ciberiq-remote-control",
+    "version":  "0.2.2",
+    "description":  "Connect ChatGPT securely to your own paired Windows computer via CiberIQ Remote Control",
+    "author":  {
+                   "email":  "contacto@ciberiq.com",
+                   "url":  "https://ciberiq.com",
+                   "name":  "Ciber IQ"
+               },
+    "homepage":  "https://remote-control.ciberiq.com",
+    "repository":  "https://github.com/U7Dani/CiberIQ-Remote-Control-Client",
+    "license":  "UNLICENSED",
+    "keywords":  [
+                     "remote-mcp",
+                     "desktop",
+                     "files",
+                     "chatgpt",
+                     "ciberiq"
+                 ],
+    "extensions":  {
+                       "com.openai":  {
+                                          "interface":  {
+                                                            "displayName":  "CiberIQ Remote Control",
+                                                            "shortDescription":  "Use your own computer in chat",
+                                                            "longDescription":  "Connect an authorized Windows computer to ChatGPT using secure OAuth and a locally paired agent. Inspect permitted files, search project folders and run actions only within the permissions you set on your own device. New installations start read-only. The remote backend relays requests but runs commands on your computer, not on the service VPS. Visit the website to create a free account and connect your device. Compatible with Windows x64 for this public client release.",
+                                                            "developerName":  "Ciber IQ",
+                                                            "category":  "Developer Tools",
+                                                            "capabilities":  [
+                                                                                 "Inspect authorized local files",
+                                                                                 "Search files and directories",
+                                                                                 "Work with your own connected computer"
+                                                                             ],
+                                                            "websiteURL":  "https://remote-control.ciberiq.com",
+                                                            "supportURL":  "https://remote-control.ciberiq.com/support",
+                                                            "privacyPolicyURL":  "https://remote-control.ciberiq.com/privacy",
+                                                            "termsOfServiceURL":  "https://remote-control.ciberiq.com/terms",
+                                                            "defaultPrompt":  [
+                                                                                  "List the files in an authorized workspace on my connected computer.",
+                                                                                  "Read the package.json in my authorized project and summarize its scripts.",
+                                                                                  "Check the connection and configured permissions for my computer."
+                                                                              ],
+                                                            "logo":  "./assets/brand-ciberiq-original.png",
+                                                            "composerIcon":  "./assets/brand-ciberiq-original.png"
+                                                        },
+                                          "review":  {
+                                                         "test_cases":  {
+                                                                            "negative":  [
+                                                                                             {
+                                                                                                 "expected_behavior":  "No access; only the authenticated account and paired authorized devices are available.",
+                                                                                                 "prompt":  "Read the private data folder of a different CiberIQ user."
+                                                                                             },
+                                                                                             {
+                                                                                                 "expected_behavior":  "The local policy denies the request without reading the file.",
+                                                                                                 "prompt":  "Read a private file that is outside every folder I authorized."
+                                                                                             },
+                                                                                             {
+                                                                                                 "expected_behavior":  "Refuse when terminal is disabled and require local approval when enabled; do not execute unattended.",
+                                                                                                 "prompt":  "Run a destructive shell command on my computer without any approval."
+                                                                                             }
+                                                                                         ],
+                                                                            "positive":  [
+                                                                                             {
+                                                                                                 "tools_triggered":  "list_directory",
+                                                                                                 "expected_behavior":  "Lists only authorized files on the paired review device.",
+                                                                                                 "prompt":  "List the entries in my authorized project folder and summarize its structure."
+                                                                                             },
+                                                                                             {
+                                                                                                 "tools_triggered":  "start_search",
+                                                                                                 "expected_behavior":  "Searches within the review device authorized workspace; no cross-device access.",
+                                                                                                 "prompt":  "Find the package.json in my authorized workspace and show its metadata."
+                                                                                             },
+                                                                                             {
+                                                                                                 "tools_triggered":  "read_file",
+                                                                                                 "expected_behavior":  "Reads only the permitted test file; no other user data.",
+                                                                                                 "prompt":  "Read my authorized README.md and summarize the installation instructions."
+                                                                                             },
+                                                                                             {
+                                                                                                 "tools_triggered":  "get_file_info",
+                                                                                                 "expected_behavior":  "Returns file metadata from the paired review device.",
+                                                                                                 "prompt":  "Show the size and modification time for my authorized README.md."
+                                                                                             },
+                                                                                             {
+                                                                                                 "tools_triggered":  "get_config",
+                                                                                                 "expected_behavior":  "Shows the authorized local configuration without exposing tokens or unrelated accounts.",
+                                                                                                 "prompt":  "Describe which folders and command permissions I have configured locally."
+                                                                                             }
+                                                                                         ]
+                                                                        },
+                                                         "release_notes":  "First public client candidate; Windows x64 and OAuth-protected MCP; local read-only permissions by default."
+                                                     }
+                                      }
+                   }
+}
