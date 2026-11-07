@@ -1,0 +1,34 @@
+{
+    "name":  "ciberiq-remote-control",
+    "version":  "0.2.2",
+    "description":  "Connect your own Windows computer to ChatGPT using secure CiberIQ OAuth device pairing",
+    "type":  "module",
+    "bin":  {
+                "ciberiq-remote-control":  "bin/ciberiq-remote-control.mjs"
+            },
+    "files":  [
+                  "bin",
+                  "manifest.json",
+                  "README.md"
+              ],
+    "engines":  {
+                    "node":  "\u003e=22.12.0"
+                },
+    "os":  [
+               "win32"
+           ],
+    "license":  "UNLICENSED",
+    "private":  false,
+    "homepage":  "https://remote-control.ciberiq.com",
+    "repository":  {
+                       "type":  "git",
+                       "url":  "git+https://github.com/U7Dani/CiberIQ-Remote-Control-Client.git"
+                   },
+    "keywords":  [
+                     "mcp",
+                     "chatgpt",
+                     "desktop",
+                     "remote",
+                     "ciberiq"
+                 ]
+}

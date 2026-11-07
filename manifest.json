@@ -1,0 +1,12 @@
+{
+    "launcherVersion":  "0.2.2",
+    "agentVersion":  "0.2.2",
+    "defaultServer":  "https://remote-control.ciberiq.com",
+    "bundles":  {
+                    "win32-x64":  {
+                                      "url":  "https://remote-control.ciberiq.com/downloads/agent-0.2.2-win32-x64.tgz",
+                                      "sha256":  "86127fd564f16ded1f6bfdfbb0f37c3c806e7d5387a23a7ccc1c046d57031fc3",
+                                      "size":  48613670
+                                  }
+                }
+}

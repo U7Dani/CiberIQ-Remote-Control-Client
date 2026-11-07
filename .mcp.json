@@ -1,0 +1,7 @@
+{
+    "mcpServers":  {
+                       "ciberiq-remote-control":  {
+                                                      "url":  "https://remote-control.ciberiq.com/mcp"
+                                                  }
+                   }
+}
