@@ -3,7 +3,24 @@
     "mcpServers":  {
                        "ciberiq-remote-control":  {
                                                       "type":  "streamable-http",
-                                                      "url":  "https://remote-control.ciberiq.com/mcp"
+                                                      "url":  "https://remote-control.ciberiq.com/mcp",
+                                                      "extensions":  {
+                                                                         "com.openai":  {
+                                                                                            "auth":  {
+                                                                                                         "type":  "oauth",
+                                                                                                         "client":  {
+                                                                                                                        "mode":  "dcr"
+                                                                                                                    },
+                                                                                                         "registrationUrl":  "https://remote-control.ciberiq.com/register",
+                                                                                                         "authorizationUrl":  "https://remote-control.ciberiq.com/authorize",
+                                                                                                         "tokenUrl":  "https://remote-control.ciberiq.com/token",
+                                                                                                         "resource":  "https://remote-control.ciberiq.com/mcp",
+                                                                                                         "baseScopes":  [
+                                                                                                                            "tools:execute"
+                                                                                                                        ]
+                                                                                                     }
+                                                                                        }
+                                                                     }
                                                   }
                    }
 }

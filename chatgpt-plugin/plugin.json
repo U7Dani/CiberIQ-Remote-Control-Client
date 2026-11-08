@@ -1,7 +1,7 @@
 {
     "$schema":  "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
     "name":  "ciberiq-remote-control",
-    "version":  "0.2.3",
+    "version":  "0.2.4",
     "description":  "Connect ChatGPT securely to your own paired Windows computer via CiberIQ Remote Control",
     "author":  {
                    "email":  "contacto@ciberiq.com",
@@ -97,7 +97,7 @@
                                                                         }
                                                      },
                                           "publication":  {
-                                                              "release_notes":  "Fix review metadata: add mandatory descriptions for all five positive and three negative cases; retain Windows OAuth MCP client 0.2.2. First public client candidate; Windows x64 and OAuth-protected MCP; local read-only permissions by default."
+                                                              "release_notes":  "Declare OAuth 2.1 via dynamic client registration and PKCE for the existing CiberIQ MCP; retain five positive and three negative review cases. No changes to client v0.2.2 or payments."
                                                           }
                                       }
                    }
