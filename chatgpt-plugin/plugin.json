@@ -1,7 +1,7 @@
 {
     "$schema":  "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
     "name":  "ciberiq-remote-control",
-    "version":  "0.2.4",
+    "version":  "0.2.5",
     "description":  "Connect ChatGPT securely to your own paired Windows computer via CiberIQ Remote Control",
     "author":  {
                    "email":  "contacto@ciberiq.com",
@@ -23,7 +23,7 @@
                                           "interface":  {
                                                             "displayName":  "CiberIQ Remote Control",
                                                             "shortDescription":  "Use your own computer in chat",
-                                                            "longDescription":  "Connect an authorized Windows computer to ChatGPT using secure OAuth and a locally paired agent. Inspect permitted files, search project folders and run actions only within the permissions you set on your own device. New installations start read-only. The remote backend relays requests but runs commands on your computer, not on the service VPS. Visit the website to create a free account and connect your device. Compatible with Windows x64 for this public client release.",
+                                                            "longDescription":  "Connect an authorized Windows computer to ChatGPT using secure OAuth and a locally paired agent. Inspect permitted files, search project folders and run actions only within the permissions you set on your own device. New installations start read-only. The remote backend relays requests but runs commands on your computer, not on the service VPS. Create your CiberIQ account through the website and connect your authorized device. Compatible with Windows x64 for this public client release.",
                                                             "developerName":  "Ciber IQ",
                                                             "category":  "Developer Tools",
                                                             "capabilities":  [
@@ -97,7 +97,7 @@
                                                                         }
                                                      },
                                           "publication":  {
-                                                              "release_notes":  "Declare OAuth 2.1 via dynamic client registration and PKCE for the existing CiberIQ MCP; retain five positive and three negative review cases. No changes to client v0.2.2 or payments."
+                                                              "release_notes":  "Public submission metadata cleanup: remove promotional wording from directory description. OAuth DCR configuration and review tests unchanged; Windows client remains version 0.2.2."
                                                           }
                                       }
                    }
