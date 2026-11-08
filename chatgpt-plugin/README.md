@@ -12,7 +12,7 @@ Estado: **candidato de publicación**, no aprobado ni publicado aún por OpenAI.
 
 1. Entrar en <https://platform.openai.com/> → Plugins, con permisos **Apps Management: Write** en la organización elegida.
 2. Completar la **verificación individual de identidad del desarrollador** cuando la plataforma la solicite. No se requiere constituir una sociedad para seleccionar la opción individual.
-3. Elegir *Upload new plugin* / *With MCP* y adjuntar el ZIP `ciberiq-chatgpt-plugin-0.2.2.zip` generado en el repositorio de distribución.
+3. Elegir *Upload new plugin* / *With MCP* y adjuntar el ZIP `ciberiq-chatgpt-plugin-0.2.3.zip` generado en el repositorio de distribución.
 4. En MCPs, conectar el origen estable `https://remote-control.ciberiq.com/mcp`. Completar OAuth e introducir solo en el portal las credenciales de una cuenta de prueba dedicada, nunca las de un usuario real ni en GitHub.
 5. El portal mostrará un **token único** para demostrar control del dominio. Publicar el valor exacto en `https://remote-control.ciberiq.com/.well-known/openai-apps-challenge`; no inventar ni compartir este token. Comprobar que lo devuelve de forma exacta y sin caché y completar la validación.
 6. Ejecutar **Scan Tools** y corregir cualquier error sobre esquemas, anotaciones `readOnlyHint`, `openWorldHint` y `destructiveHint`, consentimiento y políticas.
