@@ -7,7 +7,7 @@ Conecta tu propio ordenador con ChatGPT mediante el servicio MCP de CiberIQ Remo
 Requiere **Windows x64** y **Node.js 22.12+**.
 
 ~~~powershell
-npx --yes github:U7Dani/CiberIQ-Remote-Control-Client#v0.2.2 remote
+npx --yes github:U7Dani/CiberIQ-Remote-Control-Client#client-v0.2.3 remote
 ~~~
 
 O clona el repositorio e instala el lanzador localmente:
